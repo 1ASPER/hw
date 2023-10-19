@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn</title>
+    <style>
+         /* Active */
+
+        /* .box-1 {
+            margin: 20px;
+            background-color: red;
+            width: 70px;
+            height: 70px;
+        }
+        .box-2 {
+            margin: 20px;
+            background-color: blue;
+            width: 70px;
+            height: 70px;
+        } */
+         /* #button-1:active {
+            background-color: black;
+            color: white;
+         }
+         .box-1:active, .box-2:active {
+            background-color: black;
+         } */
+
+
+         /* Checked + html */ 
+
+        /* #input-1:checked + h3{
+            background-color: black;
+            color: white;
+        } */
+        /* Blank (Empty) */
+        /* span:empty {
+            background: red;
+            width: 10px;
+            height: 15px;
+            display: inline-block;
+        } */
+
+        /* Default */
+
+        /* :default {
+            background-color: red;
+        } */
+
+
+        /* Valid/Invalid */
+
+        /* input:valid {
+            background-color: green;
+        }
+        input:invalid {
+            background-color: red;
+        } */
+        
+        /* Target */
+        #t1:target {
+            background-color: aqua;
+            font-size: 40px;
+        }
+        #t1:target + p{
+            background-color: red;
+        }
+        #t2:target {
+            background-color: aqua;
+            font-size: 40px;
+        }
+        #t2:target + p{
+            background-color: red;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- For :active -->
+    <!-- <button id="button-1">Button</button> -->
+    <!-- <div class="box-1"></div>
+    <div class="box-2"></div> -->
+
+
+    <!-- For :checked -->
+    <!-- <input type="checkbox" id="input-1"> <- Dark theme<h3>Text</h3> -->
+
+    <!-- For :blank (:empty) -->
+    <!-- <span></span> -->
+
+    <!-- Default -->
+    <!-- <form>
+        <p><input type="submit"> <input type="submit"> <input type="reset"></p>
+    </form> -->
+
+    <!--  Dir -->
+    <!-- <p dir="ltr">Text-1</p>
+    <p dir="rtl">Text-2</p> -->
+
+    <!-- Valid / Invalid -->
+    <!-- <input type="email">
+    <input type="url"> -->
+    
+    <!-- Target -->
+    <a href="#t1">Math</a><br>
+    <a href="#t2">English</a><br>
+    <h1 id="t1">Math</h1><p>something about math</p>
+    <h1 id="t2">English</h1><p>something about english</p>
+
+    
+
+</body>
+</html>

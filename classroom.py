@@ -1,16 +1,20 @@
-from random import randint
+import sys
+sys.setrecursionlimit(100000)
 
-# task 4
+MOD = 10**9 + 7
+m = {}
 
-data = [randint(-999, 999) for i in range(randint(5, 10))]
-print(f"Before: {data}")
+def recursion(a, b, c, n):
+    if n == 0:
+        return a
+    if n < 0:
+        return 0
+    if n in m:
+        return m[n]
 
-def sort_by_last_number(elem: int | float) -> int | None:
-    match elem:
-        case int() | float() if elem >= 0:
-            return abs(elem % 10)
-        case _:  # wildcard (default)
-            raise ValueError("Error: array consists bad element!")
+    m[n] = (recursion(a, b, c, n - 1) + b * recursion(a, b, c, n - 2) + c) % MOD
+    return m[n]
 
-print(f"After {sorted(data, key=sort_by_last_number)}")
+a, b, c, n = map(int, input().split())
+print(recursion(a, b, c, n))
 

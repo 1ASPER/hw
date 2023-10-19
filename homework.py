@@ -1,19 +1,9 @@
-from utils import NumbersConverter as Num 
-# from_rhyme(rhyme_number) <- single method
+from os import remove as delete_file
 
+path = input()
 
-def main():
-    print(Num.__doc__)
-
-    while True:
-
-        data = str(input())
-
-        if not data:    # Enter or CTRL+C to break
-            break
-        
-        print(Num.from_rhyme(self=Num, num=data))
-
-
-if __name__ == "__main__":
-    main()
+try:
+    delete_file(path)
+    print(f"{path} succesfully deleted")
+except Exception as ex:
+    print(f"Fil deleting error: {ex}")
